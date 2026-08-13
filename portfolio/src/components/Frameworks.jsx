@@ -14,7 +14,6 @@ export function Frameworks() {
     "MySQL",
     "PostgresSQL",
 "aws_icon_146074",
-"azure",
     "Socket.io",
 
     "threejs",
