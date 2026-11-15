@@ -216,24 +216,41 @@ const About = () => {
         {/* Grid 3: */}
         <motion.div
           ref={tiltRef3}
-          className="grid-black-color grid-3 relative overflow-hidden cursor-pointer flex flex-col justify-center items-center text-center group" 
+          className="grid-black-color grid-3 relative overflow-hidden flex flex-col justify-center items-center text-center" 
           variants={cardFromRight}
-          onClick={() => window.open('https://cp.certmetrics.com/amazon/en/public/verify/credential/1ae777a4c2054a96ab837bc11a4a2612', '_blank')}
         >
           <div className="z-10 w-full px-6 flex flex-col items-center justify-center">
             <img 
               src="https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/aws-certified-cloud-practitioner.png" 
               alt="AWS Certified" 
-              className="w-24 h-24 mb-4 object-contain group-hover:scale-110 transition-transform duration-300"
+              className="w-24 h-24 mb-4 object-contain"
               onError={(e) => { e.target.style.display = 'none' }}
             />
             <p className="headtext text-xl text-white">AWS Certified</p>
-            <p className="subtext mt-2 text-sm text-gray-400">
-              Credential ID: <span className="font-mono text-gray-300">1ae777a4c2054a96ab837bc11a4a2612</span>
-            </p>
-            <p className="mt-3 text-sm text-blue-400 group-hover:text-blue-300 flex items-center justify-center gap-1 transition-colors">
-              Verify Credential ↗
-            </p>
+            <div className="mt-3 flex items-center justify-center gap-2 flex-wrap">
+              <span className="text-sm text-gray-300">AWS Certified Solutions Architect - Associate</span>
+              <a
+                href="https://cp.certmetrics.com/amazon/en/public/verify/credential/43c0c1a76cd248c08c0fd2a66a285287"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Verify Credential ↗
+              </a>
+            </div>
+            <div className="mt-2 flex items-center justify-center gap-2 flex-wrap">
+              <span className="text-sm text-gray-300">AWS Certified Cloud Practitioner</span>
+              <a
+                href="https://cp.certmetrics.com/amazon/en/public/verify/credential/1ae777a4c2054a96ab837bc11a4a2612"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Verify Credential ↗
+              </a>
+            </div>
           </div>
         </motion.div>
 
@@ -260,8 +277,9 @@ const About = () => {
           <div className="z-10 w-[50%] ">
             <p className="headtext">Stack & Skills</p>
             <p className="subtext">
-              I specialize in a variety of languages, frameworks and tools that
-              allow me to build robust and scalable applications
+              I specialize in React.js, Next.js, Node.js, Express.js, MongoDB and PostgreSQL,
+building robust, scalable full-stack applications with secure authentication,
+API integrations and AI-powered features.
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
